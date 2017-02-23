@@ -1,0 +1,137 @@
+@import '../../../globals.css';
+
+.container {
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+}
+@media (--child) {
+    .container {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+@media (--adult) {
+    .container {
+        padding-left: calc(var(--gutter) * 2);
+        padding-right: calc(var(--gutter) * 2);
+    }
+}
+
+/* Variations / Padding */
+
+.container--full {
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (--child) {
+    .container--full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (--adult) {
+    .container--full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (--adult) {
+    .container--limit-padding {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+
+.container--fat {
+    padding: var(--gutter);
+}
+@media (--teen) {
+    .container--fat {
+        padding: calc(var(--gutter) * 2);
+    }
+}
+
+.container--padded-top {
+    padding-top: calc(var(--gutter) / 2);
+}
+@media (--teen) {
+    .container--padded-top {
+        padding-top: var(--gutter);
+    }
+}
+
+.container--padded-top-half {
+    padding-top: calc(var(--gutter) / 2);
+}
+
+.container--padded-top-double {
+    padding-top: var(--gutter);
+}
+@media (--teen) {
+    .container--padded-top-double {
+        padding-top: calc(var(--gutter) * 2)
+    }
+}
+
+.container--padded-bottom {
+    padding-bottom: calc(var(--gutter) / 2);
+}
+@media (--teen) {
+    .container--padded-bottom {
+        padding-bottom: var(--gutter);
+    }
+}
+
+.container--padded-bottom-half {
+    padding-bottom: calc(var(--gutter) / 2);
+}
+
+.container--padded-bottom-double {
+    padding-bottom: var(--gutter);
+}
+@media (--teen) {
+    .container--padded-bottom-double {
+        padding-bottom: calc(var(--gutter) * 2)
+    }
+}
+
+/* Variations / Alignment */
+
+.container--centered {
+    text-align: center;
+}
+
+.container--align-left {
+    text-align: left;
+}
+
+.container--align-right {
+    text-align: right;
+}
+
+.container--align-center {
+    text-align: center;
+}
+
+/* Variations / Width limitations */
+
+.container--limited-narrow {
+    max-width: var(--container-limit-narrow);
+}
+
+.container--limited-medium {
+    max-width: var(--container-limit-medium);
+}
+
+.container--limited-wide {
+    max-width: var(--container-limit-wide);
+}
+
+.container--limited-text {
+    max-width: var(--container-limit-text);
+}
+
+.container--autocenter {
+    margin: 0 auto;
+}

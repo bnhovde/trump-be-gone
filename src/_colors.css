@@ -1,0 +1,15 @@
+/* colors */
+
+:root {
+    --col-pri: #000000;
+    --col-sec: #00B360;
+
+    --col-hover-light: rgba(0, 0, 0, 0.05);
+    --col-hover-dark: rgba(0, 0, 0, 0.7);
+
+    --col-gray: #DDDFD4;
+    --col-gray-light: #f1f1f1;
+
+    --col-warning: #FF2B2D;
+    --col-text: #000000;
+}

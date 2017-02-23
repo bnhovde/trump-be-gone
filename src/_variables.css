@@ -1,0 +1,44 @@
+/**
+ * Baseline number.
+ */
+
+:root {
+
+    --base-number: 1rem; /* 20px */
+
+    /**
+    * gutters.
+    */
+
+    --gutter: var(--base-number);   /* Global spacing unit. Used for all margins/paddings */
+
+    /**
+    * Input styles.
+    */
+
+    --input-line-height: 2rem;
+    --input-vertical-spacing: 1.5rem;
+
+    /**
+    * Global sizes
+    */
+
+    --border: 1px;
+
+    --header-height-mobile: 3rem;
+    --header-height: 5.8rem;
+
+    --tabmenu-height: 3rem;     /* Mobile tab menu (fixed, bottom) */
+    --hero-height: 7rem;        /* Static page heroes (home page, info pages) */
+
+    --container-limit-narrow: 22rem; /* 528px */
+    --container-limit-text: 30rem; /* 720 px */
+    --container-limit-medium: 38rem; /* 912 px */
+    --container-limit-wide: 60rem; /* 1200 px */
+
+    /**
+    * Various shared variables
+    */
+
+    --box-shadow: 0 0 0 6px rgba(0,0,0,0.12);
+}

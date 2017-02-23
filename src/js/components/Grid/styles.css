@@ -1,0 +1,124 @@
+@import '../../../globals.css';
+
+.grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: -calc(var(--gutter) / 2);
+}
+@media (--child) {
+    .grid {
+        margin-left: -var(--gutter);
+    }
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends '.grid'.
+ */
+.grid--rev {
+	direction: rtl;
+	text-align: left;
+}
+
+.grid--rev > * {
+	direction: ltr !important;
+	text-align: left !important;
+}
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends '.grid'.
+ */
+.grid--full {
+	margin-left: 0;
+}
+
+.grid--full > * {
+	padding-left: 0 !important;
+}
+
+/**
+ * Align the entire grid to the right. Extends '.grid'.
+ */
+.grid--right {
+	text-align: right;
+}
+
+.grid--right > * {
+	text-align: left !important;
+}
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends '.grid'.
+ */
+.grid--center {
+	text-align: center;
+}
+
+.grid--center > * {
+	text-align: left !important;
+}
+
+/**
+ * Align grid cells vertically ('.grid--middle' or '.grid--bottom'). Extends
+ * '.grid'.
+ */
+.grid--middle > * {
+	vertical-align: middle !important;
+}
+
+.grid--bottom > * {
+	vertical-align: bottom !important;
+}
+
+/**
+ * Create grids with narrower gutters. Extends '.grid'.
+ */
+.grid--narrow {
+	margin-left: -calc(var(--gutter) / 2);
+}
+
+.grid--narrow > * {
+	padding-left: calc(var(--gutter) / 2) !important;
+}
+
+/**
+ * Create grids with wider gutters. Extends '.grid'.
+ */
+.grid--wide {
+	margin-left: -calc(var(--gutter) / 2);
+}
+@media (--child) {
+    .grid--wide {
+        margin-left: -var(--gutter);
+    }
+}
+@media (--adult) {
+    .grid--wide {
+        margin-left: -calc(var(--gutter) * 2);
+    }
+}
+
+.grid--wide > * {
+	padding-left: calc(var(--gutter) / 2) !important;
+}
+@media (--child) {
+    .grid--wide > * {
+        padding-left: var(--gutter) !important;
+    }
+}
+@media (--adult) {
+	.grid--wide > * {
+		padding-left: calc(var(--gutter) * 2) !important;
+	}
+}
+
+/**
+ * Create space between grid items
+ */
+.grid--space-between {
+	display: flex;
+	justify-content: space-between;
+}
