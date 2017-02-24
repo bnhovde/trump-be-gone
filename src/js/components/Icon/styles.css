@@ -1,0 +1,33 @@
+@import '../../../globals.css';
+
+.container {
+    display: inline-block;
+}
+.container--padding {
+    padding: var(--gutter);
+}
+.container--nopadding {
+    padding: 0;
+}
+.container--padding-top {
+    padding-top: var(--gutter);
+}
+.container--padding-right {
+    padding-right: var(--gutter);
+}
+.container--padding-bottom {
+    padding-bottom: var(--gutter);
+}
+.container--padding-left {
+    padding-left: var(--gutter);
+}
+
+.icon--good {
+    fill: var(--col-sec);
+    stroke: var(--col-sec);
+}
+
+.icon--bad {
+    fill: var(--col-warning);
+    stroke: var(--col-warning);
+}

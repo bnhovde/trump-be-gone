@@ -1,9 +1,26 @@
-import React from 'react';
-import { render } from 'react-dom';
+/* global chrome */
+import { enableBadge, disableBadge } from './helpers/badge';
+import { processPage } from './lib/crawler';
 
-import App from './containers/App';
+chrome.storage.local.get('state', (obj) => {
+  const { state } = obj;
+  const initialState = JSON.parse(state || '{}');
 
-render(
-  <App />,
-  window.document.getElementById('app-container'),
-);
+  // Set correct badge
+  if (initialState.isEnabled) {
+    enableBadge();
+    processPage('en');
+  } else {
+    disableBadge();
+  }
+
+  // Listen to page changes
+  chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+    if (changeInfo.status === 'complete') {
+      // Run script if plugin is enabled
+      if (initialState.isEnabled) {
+        processPage('en');
+      }
+    }
+  });
+});

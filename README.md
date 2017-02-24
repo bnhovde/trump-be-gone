@@ -22,6 +22,7 @@ Sick of Trump? Chrome extension that replaces the name with something else...
 ## Links:
 
 [Chrome Extension](https://developer.chrome.com/extensions/getstarted)
+[Badge modify](https://github.com/jhen0409/react-chrome-extension-boilerplate/blob/a01eddca4c8397a91a671830f3c49fa022a5010a/chrome/extension/background/badge.js)
 
 ## Credits:
 

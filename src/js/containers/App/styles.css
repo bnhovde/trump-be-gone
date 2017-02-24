@@ -1,0 +1,88 @@
+@import '../../../globals.css';
+
+/* Global TEMP styles */
+
+html {
+    color: var(--col-text);
+    font-size: var(--size-base-em);
+    line-height: 1.5;
+    font-family: var(--font-family);
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Enable smooth-scroll if supported */
+body, .smooth-container { scroll-behavior: smooth }
+
+/* Global prefill styling for webkit (remove yellow fill) */
+:global :-webkit-autofill,
+:global :-webkit-autofill:hover,
+:global :-webkit-autofill:focus {
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+blockquote,
+p,
+a {
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: var(--border) solid currentColor;
+}
+
+/* Global Focus */
+:focus {
+    outline: 0;
+    box-shadow: var(--box-shadow);
+}
+
+/* Base tag styles */
+p,
+a,
+blockquote,
+strong {
+    font-size: var(--size-small);
+}
+@media (--teen) {
+    p,
+    a,
+    blockquote,
+    strong {
+        font-size: var(--size-regular);
+    }
+}
+
+/* Global form elements */
+button {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input {
+    font-family: var(--font-family);
+    font-weight: normal;
+}
+
+/* Helpers */
+:global .screenReaders {
+    position:absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

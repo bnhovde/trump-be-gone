@@ -3,7 +3,8 @@ var webpack = require("webpack"),
     fileSystem = require("fs"),
     env = require("./utils/env"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    WriteFilePlugin = require("write-file-webpack-plugin");
+    WriteFilePlugin = require("write-file-webpack-plugin"),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const cssnext = require('postcss-cssnext');
 const cssimport = require('postcss-import');
@@ -18,6 +19,7 @@ if (fileSystem.existsSync(secretsPath)) {
 }
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
@@ -33,7 +35,7 @@ module.exports = {
       {
           test: /\.css/,
           loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
-      }
+      },
     ]
   },
   resolve: {
@@ -58,6 +60,9 @@ module.exports = {
       filename: "background.html",
       chunks: ["background"]
     }),
+    new CopyWebpackPlugin([
+      { from: 'assets' },
+    ]),
     new WriteFilePlugin()
   ],
 

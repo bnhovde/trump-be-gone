@@ -1,0 +1,56 @@
+@import '../../../globals.css';
+
+.checkbox {
+    position: relative;
+    font-size: var(--size-small);
+}
+
+.checkbox:disabled {
+    color: var(--col-gray);
+    cursor: default;
+}
+
+.indicator {
+    display: block;
+    width:  2rem;
+    height: 2rem;
+    background-color: white;
+    border: 2px solid var(--col-gray);
+    user-select: none;
+    text-align: center;
+    border-radius: 0;
+}
+.indicator svg {
+    display: none;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.text {
+    padding-left: 1rem;
+}
+
+.Input {
+    width: 1rem;
+    margin-top: 8px;
+    margin-left: -16px;
+    border: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.Input:checked ~ .indicator {
+    border: 2px solid var(--col-pri);
+}
+
+.Input:checked ~ .indicator svg {
+    display: block;
+}
+
+.Input:focus ~ .indicator {
+    box-shadow: var(--box-shadow);
+}
